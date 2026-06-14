@@ -1,0 +1,14 @@
+{
+  "name": "tripgenius-ai-root",
+  "version": "1.0.0",
+  "description": "Full-Stack TripGenius AI (React + FastAPI)",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
